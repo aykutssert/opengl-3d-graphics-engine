@@ -53,57 +53,6 @@ This project demonstrates comprehensive 3D graphics programming skills through t
 - **Terrain Navigation**: Smooth movement across farm landscape
 - **Object Interaction**: Collision response with all scene elements
 
-## 🚀 Getting Started
-
-### Prerequisites
-
-#### macOS (Homebrew)
-```bash
-brew install glfw assimp glm
-```
-
-#### Ubuntu/Debian
-```bash
-sudo apt update
-sudo apt install libglfw3-dev libassimp-dev libglm-dev
-```
-
-#### Windows (MSYS2/MinGW)
-```bash
-pacman -S mingw-w64-x86_64-glfw mingw-w64-x86_64-assimp mingw-w64-x86_64-glm
-```
-
-### Building the Project
-
-#### macOS
-```bash
-g++ src/main.cpp src/glad.o \
-    -I/opt/homebrew/include -Iinclude -I./src \
-    -L/opt/homebrew/lib -lglfw -lassimp -lz -framework OpenGL \
-    -std=c++17 -o Farm
-```
-
-#### Linux
-```bash
-g++ src/main.cpp src/glad.o \
-    -Iinclude -I./src \
-    -lglfw -lassimp -lGL -ldl \
-    -std=c++17 -o Farm
-```
-
-#### Windows (MinGW)
-```bash
-g++ src/main.cpp src/glad.o \
-    -Iinclude -I./src \
-    -lglfw3 -lassimp -lopengl32 -lgdi32 \
-    -std=c++17 -o Farm.exe
-```
-
-### Running the Application
-```bash
-./Farm        # macOS/Linux
-Farm.exe      # Windows
-```
 
 ## 🎮 Controls & Navigation
 
@@ -213,43 +162,54 @@ This project demonstrates proficiency in:
 - **Software Architecture**: Modular design, separation of concerns, extensible systems
 - **Cross-Platform Development**: Windows, macOS, and Linux compatibility
 
-## 📁 Project Structure
 
-```
-3d-farm-scene-opengl/
-├── src/
-│   ├── main.cpp              # Main application and render loop
-│   ├── glad.o                # OpenGL function loader
-│   ├── farm_objects.obj      # 3D model files
-│   ├── textures/             # Texture assets
-│   │   ├── wood.jpg
-│   │   ├── grass.png
-│   │   └── stone.jpg
-│   └── shaders/              # GLSL shader programs
-│       ├── vertex.glsl
-│       ├── fragment.glsl
-│       └── shadow.glsl
-├── include/
-│   ├── stb_image.h           # Image loading library
-│   └── glm/                  # Mathematics library headers
-├── screenshots/              # Visual documentation
-│   ├── 1.png - 6.png
-└── README.md                 # This documentation
+### Prerequisites
+
+#### macOS (Homebrew)
+```bash
+brew install glfw assimp glm
 ```
 
-## 🎯 Technical Highlights
+#### Ubuntu/Debian
+```bash
+sudo apt update
+sudo apt install libglfw3-dev libassimp-dev libglm-dev
+```
 
-- **Real-time Rendering**: 60+ FPS performance with complex scene
-- **Advanced Lighting**: Multiple light sources with realistic shadow casting
-- **Physics Integration**: Smooth collision detection and response systems
-- **Cross-Platform Compatibility**: Consistent behavior across operating systems
-- **Professional Code Quality**: Clean architecture, comprehensive error handling
-- **Extensible Design**: Modular components for easy feature addition
+#### Windows (MSYS2/MinGW)
+```bash
+pacman -S mingw-w64-x86_64-glfw mingw-w64-x86_64-assimp mingw-w64-x86_64-glm
+```
 
----
+### Building the Project
 
-**Course**: Computer Graphics  
-**Language**: C++17  
-**Graphics API**: OpenGL 3.3 Core Profile  
-**Platform Support**: Windows, macOS, Linux  
-**Skills Demonstrated**: 3D Graphics Programming, Shader Development, Physics Simulation, Cross-Platform Development
+#### macOS
+```bash
+g++ src/main.cpp src/glad.o \
+    -I/opt/homebrew/include -Iinclude -I./src \
+    -L/opt/homebrew/lib -lglfw -lassimp -lz -framework OpenGL \
+    -std=c++17 -o Farm
+```
+
+#### Linux
+```bash
+g++ src/main.cpp src/glad.o \
+    -Iinclude -I./src \
+    -lglfw -lassimp -lGL -ldl \
+    -std=c++17 -o Farm
+```
+
+#### Windows (MinGW)
+```bash
+g++ src/main.cpp src/glad.o \
+    -Iinclude -I./src \
+    -lglfw3 -lassimp -lopengl32 -lgdi32 \
+    -std=c++17 -o Farm.exe
+```
+
+### Running the Application
+```bash
+./Farm        # macOS/Linux
+Farm.exe      # Windows
+```
+
